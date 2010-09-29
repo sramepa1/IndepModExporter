@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/junit"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jgraph"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/log4j"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/foxtrot"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jgoodies binding"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jgoodies form"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jide"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/IndependentModeler"/>
+	<classpathentry kind="output" path="C:/Documents and Settings/Glaurung/My Documents/CVUT/5 semestr/y36si23/indepmod/IndependentModeler/out/production/NotationEPC"/>
+</classpath>

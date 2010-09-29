@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jide"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jgoodies binding"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jgoodies form"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/log4j"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/foxtrot"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/junit"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/NotationEPC"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ModuleEPCImageExport"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/NotationProcessHierarchy"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ModuleProcessHierarchyTreeLayout"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ModuleDiagramReference"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ExtensionMemoryIndicator"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/NotationClassModel"/>
+	<classpathentry kind="output" path="out/production/IndependentModeler"/>
+</classpath>

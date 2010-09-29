@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_13" class="java.beans.XMLDecoder"> 
+ <object class="cz.cvut.promod.services.projectService.treeProjectNode.ProjectDiagram"> 
+  <string>Diag1</string> 
+  <string>EPC</string> 
+  <object class="java.util.UUID"> 
+   <long>-4891498978826698266</long> 
+   <long>-6035070589509819176</long> 
+  </object> 
+  <object class="cz.cvut.promod.epc.modelFactory.diagramModel.EPCDiagramModel"> 
+   <object class="org.jgraph.graph.GraphLayoutCache"> 
+    <object class="cz.cvut.promod.epc.modelFactory.epcGraphModel.EPCGraphModel"> 
+     <object class="java.util.ArrayList"/> 
+     <object class="org.jgraph.graph.AttributeMap"/> 
+    </object> 
+    <object class="cz.cvut.promod.epc.workspace.cell.EPCCellViewFactory"/> 
+    <array class="org.jgraph.graph.CellView" length="0"/> 
+    <array class="org.jgraph.graph.CellView" length="0"/> 
+    <boolean>false</boolean> 
+   </object> 
+  </object> 
+ </object> 
+</java> 

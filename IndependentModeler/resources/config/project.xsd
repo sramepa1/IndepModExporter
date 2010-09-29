@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- definition of attributes -->
+  <xs:attribute name="identifier" type="xs:string"/>
+  <xs:attribute name="full-name" type="xs:string"/>
+  <xs:attribute name="abbreviation" type="xs:string"/>
+  <xs:attribute name="extension" type="xs:string"/>
+  <xs:attribute name="description" type="xs:string"/>
+
+<!-- definition of simple elements -->
+  <xs:element name="last-name" type="xs:string"/>
+  <xs:element name="last-location" type="xs:string"/>
+  <xs:element name="date" type="xs:string"/>
+  <xs:element name="user" type="xs:string"/>  
+  
+  <!-- definition of complex elements -->
+  <xs:element name="extension">
+    <xs:complexType>
+      <xs:sequence>     
+        <!-- empty -->
+      </xs:sequence>
+      <xs:attribute ref="identifier" use="required"/>
+      <xs:attribute ref="full-name" use="required"/>
+      <xs:attribute ref="description" use="required"/>    
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="module">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- empty -->
+      </xs:sequence>
+      <xs:attribute ref="identifier" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="notation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="module" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute ref="identifier" use="required"/>
+      <xs:attribute ref="full-name" use="required"/>
+      <xs:attribute ref="abbreviation" use="required"/>
+      <xs:attribute ref="extension" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="plugins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="notation" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="extension" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="plugins" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>  
+
+  <xs:element name="basics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="last-name" maxOccurs="1" minOccurs="1"/>
+        <xs:element ref="last-location" maxOccurs="1" minOccurs="1"/>
+        <xs:element ref="date" maxOccurs="1" minOccurs="1"/>
+        <xs:element ref="user" maxOccurs="1" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element> 
+  
+  <xs:element name="promod-project">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="basics" maxOccurs="1" minOccurs="1"/>
+        <xs:element ref="configuration" maxOccurs="1" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>  
+
+</xs:schema>

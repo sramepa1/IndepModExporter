@@ -1,0 +1,16 @@
+2010-07-17  Martin Vejmelka <martin.vejmelka@seznam.cz>
+
+	* /: added existing project sources
+
+	* libs/LIBRARIES: list of libraries required to run
+	IndependentModeler application
+
+	* ChangeLog: added this ChangeLog file, please follow started
+	ChangeLog format (for another example how to write ChangeLog files
+	visit Wikipedia)
+
+	* IndependentModeler/IndependentModeler.ipr: fixed missing
+	'?*.xsd' resource pattern (*.xsd files couldn't be loaded, which
+	caused plugins.xml not to be read - as a result plugins couldn't
+	be loaded)
+

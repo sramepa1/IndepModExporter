@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>JGoodies Binding :: Guide :: Introduction</title>
+        <link rel="stylesheet" type="text/css" href="../style.css" >
+	<meta name="description" content="The JGoodies Binding provides an elegant means to present object properties in a user interface.">
+	<meta name="author"	     content="Karsten Lentzsch">
+	<meta name="keywords"	 content="JGoodies Data Binding Java Swing UI Design Usability Lentzsch Kiel">
+	<meta name="robots"	     content="index, follow">
+	<meta name="date"	     content="2006-01-01">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0" bottommargin="0" >
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+    <td colspan="3" bgcolor="DDDCDC"><a href="../../README.html"><img 
+	src="../images/banner.gif" width="436" height="46" alt=":: JGOODIES Looks :: Professional Swing Look&amp;Feels" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3" height="1" bgcolor="C9C8C8"></td>
+</tr>
+<tr>
+    <td width="160" height="500" valign="top" bgcolor="F4f3f3" class="nav" nowrap="nowrap">
+    <div style="margin-left: 17px; margin-top: 17px; margin-right: 10px; ; margin-bottom: 17px; line-height: 18px;">
+
+        <!-- ************ Anfang der Seitennavigation **************************** -->
+
+	<b>General</b>
+	<br>::&nbsp;<a class="nav" href="../../README.html">Readme</a>
+	<br>::&nbsp;<a class="nav" href="../../RELEASE-NOTES.txt">Release Notes</a>
+	<br>::&nbsp;<a class="nav" href="../../LICENSE.txt">License</a>
+	<br>::&nbsp;<a class="nav" href="../references.html">References</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/faq.html">FAQ</a>
+	<p>
+	<b>User's Guide</b>
+	<br>::&nbsp;<a class="nav" href="introduction.html"><b>Introduction</b></a>
+	<br>::&nbsp;<a class="nav" href="domainobjects.html">Domain Objects</a>
+	<br>::&nbsp;<a class="nav" href="domainadapters.html">Domain Adapters</a>
+	<br>::&nbsp;<a class="nav" href="valuemodels.html">Value Models</a>
+	<br>::&nbsp;<a class="nav" href="viewadapters.html">View Adapters</a>
+	<br>::&nbsp;<a class="nav" href="tasks.html">Tasks</a>
+	<p>
+	<a class="nav" href="../api/index.html"><b>API Docs</b></a>
+	<p>
+	<b>Web Pages</b>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/">Project Home</a>
+	<br>::&nbsp;<a class="nav" href="http://www.jgoodies.com/downloads/libraries.html">Downloads</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/servlets/ProjectNewsList">Announcements</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/servlets/ProjectMailingListList">Mailing Lists</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/servlets/ProjectIssues">Issue Tracker</a>
+	<br>::&nbsp;<a class="nav" href="https://www.jgoodies.com/freeware/">More Examples</a>
+
+        
+         <!-- *********** Ende der Seitennavigation ******************************* -->
+
+    </div>
+    </td>
+    <td width="1" bgcolor="E7E5E5"><img src="/images/banner.gif" width="1" height="1" alt=""></td>
+    <td width="90%" valign="top" >
+	<div style="margin-left: 20px; margin-top: 17px; margin-bottom: 17px">
+
+        <!-- ************ Anfang des Inhalts ***************************************** -->
+	
+	<table width="530" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	  <td>
+	<h1>:: Guide :: Introduction ::</h1>
+	
+     The JGoodies Binding builds adapter chains between the domain layer
+     and the presentation layer and updates both sides:  
+        views are updated if domain object properties have been changed, 
+        and domain properties are updated if the presentation has been changed. 
+        
+
+	 <h2>Related Documentation</h2>
+	 
+	 You can find a presentation about Binding techniques at the 
+	 <a href="http://www.jgoodies.com/articles/">JGoodies Articles</a> page.
+	 
+    <p>
+	Currently the primary documentation are the accompanying tutorial sources.
+	These demonstrate typical uses of the Binding library. It is strongly 
+	recommended to browse and study all tutorial example classes.
+ 
+	 <p>
+	 Martin Fowler is in the process of adding 
+	 <a href="http://martinfowler.com/eaaDev/">further patterns</a> 
+	 to his catalog of "Patterns for Enterprise Application Architecture" [P of EAA].
+	 These additions contain the
+	 <a href="http://martinfowler.com/eaaDev/PresentationModel.html">Presentation 
+	 Model</a> pattern that can significantly improve the architecture
+	 and maintainability of your Swing applications.
+	 
+	 <p>
+     An overview of the application architecture around this
+     data binding is available at pp. 255 in this
+     <a href="http://www.cincom.com/downloads/pdf/AppDevGuide.pdf"
+        target="dynamic">Application Guide</a>.
+     
+     There's an introduction to 
+     <a href="http://c2.com/ppr/vmodels.html">ValueModels</a>,
+     and you may read the 
+     <a href="http://www.object-arts.com/EducationCentre/Overviews/MVC.htm">Comparison</a>
+     of our approach with MVP.
+
+	<h3>Domain Layer</h3>
+	
+	The tutorial is built around the Album class. It provides 'aspects' 
+	that we want to present in a UI, and a UI may update 
+	the values of these aspects, or we build up a two-way connection 
+	between the UI and the aspects and each side can update the other. 
+	In other words, the model's aspects are bound to UI components.
+ 
+    <p>
+	The aspects can be read-write, read-only, or write-only; 
+	typically they are read-write. In addition such an aspect can be 
+	observable, i.e. other objects can observe changes of the aspect's value. 
+	There are different approaches to implement aspects. 
+	
+	<p>
+	In the Java world there's a well-received standard that many people
+	work with: the Java Bean standard. Beans provide everything necessary 
+	for accessing and observing aspects - here they are called <i>properties</i>. 
+	And it's quite easy to follow the Java Bean naming conventions. 
+	Basically you provide a pair of getter and setter methods 
+	for each property. And typically you fire a PropertyChangeEvent 
+	in the setter to notify observers about property changes.
+	The Binding works with other domain object styles, 
+	but many convenience classes focus on Beans.
+	Also, if you use Beans, you need no references from your domain classes
+	to the JGoodies Binding library. This makes it easier to change
+	the binding style later.
+	
+	<p>
+	In the tutorial the <tt>Album</tt> class extends <tt>Model</tt>
+	and provides getters and setters for each property, for example
+	<tt>#getTitle()</tt> and <tt>setTitle(String)</tt>. 
+ 
+ 
+	<h3>From Domain to ValueModel</h3>
+	
+	The PresentationModel class vends adapters
+	that convert the domain Bean properties into the ValueModel interface.
+	For example to access an Album's title we write: 
+	new PresentationModel(anAlbum).getModel("title"). 
+	We can then read and write the title via the ValueModel methods
+	<tt>#getValue</tt>/<tt>#setValue</tt>. 
+ 
+ 
+	<h3>ValueModel</h3>
+	We now can read and write domain aspects using a uniform and 
+	very simple API (getValue/setValue) and can observe value changes. 
+	We can operate on these values to convert types, to buffer values, 
+	to cache values, etc. We can reuse a set of classes for each 
+	of these tasks. For example the BufferedValueModel delays 
+	value changes until you commit them. Or we can change the value 
+	source using a multiplexer, so that we can change the customer 
+	instance we're asking for the last name. Think of a JList of 
+	albums where you select different albums and a details 
+	view shows the title and artist of the current selection 
+	in a form with text field.
+ 
+	<h3>From ValueModel to Swing Model</h3>
+	To use a ValueModel with a Swing component, we've to convert
+	from the #getValue/#setValue interface to the model interface 
+	as required by the component class. For example ValueModels 
+	that holds Strings can be converted to the Document interface 
+	that is the model for JTextComponent. Or a ValueModel that holds 
+	a Boolean can be converted to a ToggleButtonModel for use in 
+	a JCheckBox or JRadioButton. All these adapters can replace the 
+	Swing convenience model implementations. The Binding library 
+	provides prepared adapters to Swing components in package 
+	<tt>com.jgoodies.binding.adapter</tt>.
+ 
+   <p>
+	In some cases we need to set Swing component properties that
+	have no underlying model. For example, the <i>value</i> property
+	of the JFormattedTextField has no model that stores this value.
+	The PropertyConnector class can connect two properties in
+	two beans and synchronizes each property value with the other.
+ 
+ 
+	<h3>Pros and Cons</h3>
+	This binding approach can be used in many applications - 
+	I'd say in about 70 or 80% of all Swing applications. 
+	It can significantly save time to bind and buffer domain aspects 
+	in a Swing UI. However, the downside is that this approach 
+	increases the learning curve that is already quite high in Swing. 
+	And so, check carefully whether this binding is appropriate in your project.
+ 
+ 	<p>
+	Our binding leads to clean code and helps developers understand 
+	where to put what code: 1) implement domain aspects in domain 
+	Bean classes, 2) build panel classes that consist only of UI 
+	components and panel building code, 3) connect these two layers 
+	using a chain of adapters or using a middle code layer that 
+	holds these adapter so that other views can present the same data. 
+ 
+ 	<p>
+	A true alternative to this binding is to copy values from 
+	the domain object to the convenience models of the Swing 
+	components and write the values back to the domain if you click on OK. 
+	The copying approach is easy to understand and works well 
+	if each aspect is presented by a single view.
+	If multiple views present the same value, you may end up 
+	with cluttered code.
+	<p>
+	Anyway, even with the copying approach you can (and should)
+	benefit from the Presentation Model pattern and a 3-tier 
+	architecture.
+
+     
+
+	</td>
+	</tr>
+	</table>
+
+
+        <!-- ************ Ende des Inhalts ************************************** -->
+	</div>
+    </td>
+</tr>
+
+<tr>
+    <td nowrap="nowrap" bgcolor="F4f3f3">
+      <div style="font-size: 10px; margin-left: 17px; margin-top: 20px; margin-right: 10px; margin-bottom: 4px;">
+      (c) 2008 JGoodies
+      </div>
+    </td>
+    <td width="1" bgcolor="E7E5E5"></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="2" height="1" bgcolor="E7E5E5"></td>
+    <td></td>
+</tr>
+
+</table>
+
+</body>
+</html>

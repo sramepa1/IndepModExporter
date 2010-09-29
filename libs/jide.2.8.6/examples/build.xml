@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ /*
+  ~  * @(#)build.xml 2/26/2006
+  ~  *
+  ~  * Copyright 2002 - 2006 JIDE Software Inc. All rights reserved.
+  ~  */
+  -->
+<project name="JIDE Examples" default="default">
+    <target name="init" description="">
+        <!-- Echo system variables. -->
+        <echo message="Ant Version: ${ant.version}"/>
+        <echo message="--------------------------------"/>
+        <echo message="Java Vendor: ${java.vendor}"/>
+        <echo message="Java Version: ${java.version}"/>
+        <echo message="Java Home: ${java.home}"/>
+        <echo message="--------------------------------"/>
+        <echo message="User Name: ${user.name}"/>
+        <echo message="User Home: ${user.home}"/>
+        <echo message="Current Dir: ${user.dir}"/>
+        <echo message="--------------------------------"/>
+        <echo message="Base Dir: ${basedir}"/>
+        <!-- Create the time stamp. -->
+        <tstamp/>
+    </target>
+
+    <target name="clean" description="">
+        <delete dir="${basedir}/classes" failonerror="false"/>
+        <mkdir dir="${basedir}/classes"/>
+    </target>
+    <path id="jide_classpath">
+        <pathelement location="${basedir}/classes"/>
+        <pathelement location="${basedir}/lib/jide-common.jar"/>
+        <pathelement location="${basedir}/lib/jide-components.jar"/>
+        <pathelement location="${basedir}/lib/jide-dock.jar"/>
+        <pathelement location="${basedir}/lib/jide-grids.jar"/>
+        <pathelement location="${basedir}/lib/jide-action.jar"/>
+        <pathelement location="${basedir}/lib/jide-dialogs.jar"/>
+        <pathelement location="${basedir}/lib/jide-pivot.jar"/>
+        <pathelement location="${basedir}/lib/jide-data.jar"/>
+        <pathelement location="${basedir}/lib/jide-shortcut.jar"/>
+        <pathelement location="${basedir}/lib/jide-editor.jar"/>
+        <pathelement location="${basedir}/lib/jide-rss.jar"/>
+        <pathelement location="${basedir}/lib/jide-dashboard.jar"/>
+        <pathelement location="${basedir}/lib/jide-charts.jar"/>
+        <pathelement location="${basedir}/lib/jide-gantt.jar"/>
+        <pathelement location="${basedir}/lib/jide-designer.jar"/>
+        <pathelement location="${basedir}/lib/jide-synthetica.jar"/>
+    </path>
+    <target name="compile" depends="init, clean" description="">
+        <javac srcdir="${basedir}" destdir="${basedir}/classes" fork="yes" debug="on" verbose="no">
+            <classpath refid="jide_classpath"/>
+            <classpath path="${basedir}/../examples/A3.SwingSet2/SwingSet2.jar"/>
+        </javac>
+        <copy todir="${basedir}/classes">
+            <fileset dir="${basedir}/Demo" includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/A1.SampleWord"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/A2.SampleVsnet"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/B2.IconsFactory"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/B4.JideButton"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/B6.JideTabbedPane"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/B8.JideScrollPane"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/B9.Popup"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/B14.IntelliHints" includes="**/*.gz"/>
+            <fileset dir="${basedir}/D3.InitialLayoutDockingFramework" includes="**/*.ilayout"/>
+            <fileset dir="${basedir}/C3.CollapsiblePane"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/C4.FloorTabbedPane"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/C6.Alert"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/G8.HierarchicalTable"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/G15.QuickFilter"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties,**/*.gz"/>
+            <fileset dir="${basedir}/G27.AutoFilterTableHeader"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties,**/*.gz"/>
+            <fileset dir="${basedir}/G22.ImagePreviewList"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/G28.GroupTable"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/G29.BeanTableModel"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/G30.GroupList"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/G31.DualList"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/W1.Wizard"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/W2.OptionsDialog"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/W2.OptionsDialog"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/W3.TipsOfTheDay"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/H1.Dashboard"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties"/>
+            <fileset dir="${basedir}/S1.ShortcutEditor" includes="**/*.xml"/>
+            <fileset dir="${basedir}/P1.PivotTablePane"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties,**/*.gz"/>
+            <fileset dir="${basedir}/P2.CalculatedTableModel"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties,**/*.gz"/>
+            <fileset dir="${basedir}/P3.AggregateTable"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties,**/*.gz"/>
+            <fileset dir="${basedir}/E1.CodeEditor"
+                     includes="**/*.gif,**/*.jpg,**/*.png,**/*.properties,**/*.gz,sample.*"/>
+            <fileset dir="${basedir}/T3.HibernateTableModel" includes="**/*.xml,**/*.properties"/>
+            <fileset dir="${basedir}/R1.Charts" includes="**/*.png,**/*.txt"/>
+            <fileset dir="${basedir}/N1.Gantt" includes="**/*.png,**/*.txt"/>
+        </copy>
+        <copy todir="${basedir}/classes">
+            <fileset dir="${basedir}/Demo" includes="**/*.java"/>
+            <fileset dir="${basedir}/A1.SampleWord" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/A2.SampleVsnet" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/A4.ThreeActionFramework" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B1.Layouts" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B10.CheckBoxList" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B11.AutosizingTextArea" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B12.IndeterminateProgressBar" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B13.AutoCompletion" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B14.IntelliHints" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B15.StyledLabel" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B16.CheckBoxTree" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B17.RangeSlider" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B18.FolderChooser" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B19.Overlayable" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B20.TitledSeparator" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B21.MarqueePane" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B2.IconsFactory" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B3.Borders" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B4.JideButton" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B5.JideSplitPane" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B6.JideTabbedPane" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B7.SearchableComponents" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B8.JideScrollPane" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/B9.Popup" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/C1.DocumentPane" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/C2.StatusBar" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/C3.CollapsiblePane" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/C4.FloorTabbedPane" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/C5.FastGradientPaint" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/C6.Alert" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/D1.DockingFramework" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/D2.TwoDockingFramework" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/D3.InitialLayoutDockingFramework"
+                     includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G1.PropertyPane" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G10.TableScrollPane" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G11.TableSplitPane" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G12.JideTable" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G13.DirectionChooserDemo" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G14.Converter" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G15.QuickFilter" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G16.SpanTable" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G17.StyleTable" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G18.TreeTable" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G19.SortableList" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G2.SortableTable" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G20.SortableTree" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G21.Spinners" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G22.ImagePreviewList" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G23.TextFields" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G24.Calculator" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G25.CachedTableModel" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G26.ContextSensitiveTable" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G27.AutoFilterTableHeader" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G28.GroupTable" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G29.BeanTableModel" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G30.GroupList" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G31.DualList" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G32.NavigableTable" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G33.CustomFilterEditor" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G34.CellStyleEditor" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G35.ShrinkSearchableSupport" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G3.LargeSortableTable" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G4.ComboBoxes" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G5.DateComboBoxes" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G6.ColorComboBoxes" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G7.FilterableTable" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G8.HierarchicalTable" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/G9.TableUtilsDemo" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/H1.Dashboard" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/W1.Wizard" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/W2.OptionsDialog" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/W3.TipsOfTheDay" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/W4.ButtonPanel" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/W5.BannerPanel" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/W6.StandardDialog" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/W7.JideOptionPane" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/S1.ShortcutEditor" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/P1.PivotTablePane" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/P2.CalculatedTableModel" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/P3.AggregateTable" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/E1.CodeEditor" includes="**/*.java,**/*.html"
+                     excludes="gatchan\**,net\**,sidekick\**"/>
+            <fileset dir="${basedir}/F1.FeedReader" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/T1.NavigationBar" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/T2.DatabaseTableModel" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/T3.HibernateTableModel" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/R1.Charts" includes="**/*.java,**/*.html"/>
+            <fileset dir="${basedir}/N1.Gantt" includes="**/*.java,**/*.html"/>
+        </copy>
+        <copy todir="${basedir}/classes">
+            <fileset dir="${basedir}/C1.DocumentPane/"/>
+        </copy>
+        <copy todir="${basedir}/classes">
+            <fileset dir="${basedir}/A2.SampleVsnet/"/>
+        </copy>
+        <echo message="To see available targets, type 'ant list'"/>
+        <echo message="To see a demo, type 'ant target_name'"/>
+    </target>
+    <target name="list" description="list available demo targets">
+        <echo message="Available demo targets:"/>
+        <echo message="-------------------------------------------"/>
+        <echo message="In the format of 'targnet_name: demo_name'."/>
+        <echo message="To run a target, type in 'ant target_name'."/>
+        <echo message="For example: 'ant D1'"/>
+        <echo message="-------------------------------------------"/>
+        <echo message=""/>
+        <echo message="Collection of all demos -------------------"/>
+        <echo message="ALL: all demos"/>
+        <echo message=""/>
+        <echo message="Demo for JIDE Common-----------------------"/>
+        <echo message="B1.1: JideBorderLayoutDemo"/>
+        <echo message="B1.2: JideBoxLayoutDemo"/>
+        <echo message="B2: IconsFactoryDemo"/>
+        <echo message="B3: BorderDemo"/>
+        <echo message="B4: JideButtonDemo"/>
+        <echo message="B5: JideSplitPaneDemo"/>
+        <echo message="B6: JideTabbedPaneDemo"/>
+        <echo message="B7: SearchableDemo"/>
+        <echo message="B7.1: SearchableBarDemo"/>
+        <echo message="B8: JideScrollPaneDemo"/>
+        <echo message="B9: PopupDemo"/>
+        <echo message="B10: CheckBoxListDemo"/>
+        <echo message="B11: AutosizingTextAreaDemo"/>
+        <echo message="B12: IndeterminateProgressBar"/>
+        <echo message="B13.AutoCompletionDemo"/>
+        <echo message="B14.IntelliHintsDemo"/>
+        <echo message="B15.StyledLabelDemo"/>
+        <echo message="B16.CheckBoxTreeDemo"/>
+        <echo message="B17.RangeSlider"/>
+        <echo message="B18.FolderChooser"/>
+        <echo message="B19.Overlayable"/>
+        <echo message="B20.TitledSeparator"/>
+        <echo message="B21.MarqueePaneDemo"/>
+        <echo message=""/>
+        <echo message="Demo for JIDE Components-------------------"/>
+        <echo message="C1: DocumentPaneDemo"/>
+        <echo message="C2: StatusBarDemo"/>
+        <echo message="C3: CollapsiblePaneDemo"/>
+        <echo message="C4.1: FloorTabbedPaneDemo"/>
+        <echo message="C4.2: OutlookTabbedPaneDemo"/>
+        <echo message="C5: FastGradientPaint"/>
+        <echo message="C6: AlertDemo"/>
+        <echo message="C7: BalloonTipDemo"/>
+        <echo message=""/>
+        <echo message="Demo for JIDE Docking Framework-----------"/>
+        <echo message="D1: DockingFrameworkDemo"/>
+        <echo message="D2: TwoDockDemo"/>
+        <echo message="D3: InitialLayoutDockingFrameworkDemo"/>
+        <echo message="D4: HeavyweightDockingFrameworkDemo"/>
+        <echo message=""/>
+        <echo message="Demo for JIDE Action Framework -----------"/>
+        <echo message="A1: SampleWord"/>
+        <echo message="A2: SampleVsnet"/>
+        <echo message="A3: SwingSet2"/>
+        <echo message="A4: ThreeActionFrameworkDemo"/>
+        <echo message=""/>
+        <echo message="Demo for JIDE Grids-----------------------"/>
+        <echo message="G1: PropertyPaneDemo"/>
+        <echo message="G2: SortableTableDemo"/>
+        <echo message="G2.1: TableSortItemEditorDemo"/>
+        <echo message="G3: LargeSortableTableDemo"/>
+        <echo message="G4: ComboBoxDemo"/>
+        <echo message="G5.1: DateComboBoxDemo"/>
+        <echo message="G5.2: DateChooserDemo"/>
+        <echo message="G5.3: CalendarViewDemo"/>
+        <echo message="G6: ColorChooserDemo"/>
+        <echo message="G7.1: FilterableTableDemo"/>
+        <echo message="G7.2: LuceneFilterableTableDemo"/>
+        <echo message="G7.3: AutoFilterTableDemo"/>
+        <echo message="G8.1: HierarchicalTableDemo - JIDE Product Table"/>
+        <echo message="G8.2: HierarchicalTableDemo - Stock Trading Table"/>
+        <echo message="G8.3: HierarchicalTableDemo - Add/Remove Programs"/>
+        <echo message="G9: TableUtilsDemo"/>
+        <echo message="G10: TableScrollPaneDemo"/>
+        <echo message="G10.1: TreeTableScrollPaneDemo"/>
+        <echo message="G11: TableSplitPaneDemo"/>
+        <echo message="G12: JideTableDemo"/>
+        <echo message="G12.1: AutoResizeModeDemo"/>
+        <echo message="G13: DirectionChooserDemo"/>
+        <echo message="G14: ConverterDemo"/>
+        <echo message="G15.1: QuickFilterTableDemo"/>
+        <echo message="G15.2: QuickFilterListDemo"/>
+        <echo message="G15.3: QuickFilterTreeDemo"/>
+        <echo message="G16.1: AbstractSpanTableDemo"/>
+        <echo message="G16.2: DefaultSpanTableDemo"/>
+        <echo message="G17.1: StyleTableDemo"/>
+        <echo message="G17.2: TableFlashableDemo"/>
+        <echo message="G17.3: GradientStyleTableDemo"/>
+        <echo message="G17.4: StripesTableDemo"/>
+        <echo message="G18: FileSystemTreeTableDemo"/>
+        <echo message="G19.1: SortableListDemo"/>
+        <echo message="G19.2: SortableComboBoxDemo"/>
+        <echo message="G20: SortableTreeDemo"/>
+        <echo message="G21.1: DateSpinnerDemo"/>
+        <echo message="G21.2: PointSpinnerDemo"/>
+        <echo message="G22: ImagePreviewListDemo"/>
+        <echo message="G23.1: IPTextFieldDemo"/>
+        <echo message="G23.2: CreditCardTextFieldDemo"/>
+        <echo message="G24: CalculatorDemo"/>
+        <echo message="G25: CachedTableModelDemo"/>
+        <echo message="G26: ContextSensitiveTableDemo"/>
+        <echo message="G27.1: AutoFilterTableDemo"/>
+        <echo message="G27.2: AutoFilterTreeTableDemo"/>
+        <echo message="G28: GroupTableDemo"/>
+        <echo message="G29: BeanTableModel"/>
+        <echo message="G30.1: FontGroupListDemo"/>
+        <echo message="G30.2: IconGroupListDemo"/>
+        <echo message="G31: DualListDemo"/>
+        <echo message="G32: AbstractNavigableTableDemo"/>
+        <echo message="G33: CustomFilterDemo"/>
+        <echo message="G34: CustomStyleDemo"/>
+        <echo message="G35: ShrinkSearchableDemo"/>
+        <echo message=""/>
+        <echo message="Demo for JIDE Dialogs---------------------"/>
+        <echo message="W1: WizardDemo"/>
+        <echo message="W2.1: FirebirdOptionsDialog"/>
+        <echo message="W2.2: IntelliJOptionsDialog"/>
+        <echo message="W2.3: ListStyleOptionsDialog"/>
+        <echo message="W2.4: VsnetOptionsDialog"/>
+        <echo message="W3: TipsOfTheDayDemo"/>
+        <echo message="W4: ButtonPanelDemo"/>
+        <echo message="W5: BannerPanelDemo"/>
+        <echo message="W6: StandardDialogDemo"/>
+        <echo message="W7: JideOptionPaneDemo"/>
+        <echo message=""/>
+        <echo message="Demo for JIDE Shortcut Editor-------------"/>
+        <echo message="S1: ShortcutEditorDemo"/>
+        <echo message=""/>
+        <echo message="Demo for JIDE Pivot Grid-------------"/>
+        <echo message="P1: PivotTableDemo"/>
+        <echo message="P2: CalculatedTableModelDemo"/>
+        <echo message="P3: AggregateTableDemo"/>
+        <echo message=""/>
+        <echo message="Demo for JIDE Data Grids-------------"/>
+        <echo message="T1.PageNavigationBarDemo"/>
+        <echo message="T2.1.DatabaseTableModelDemo"/>
+        <echo message="T2.2.DatabasePageTableModelDemo"/>
+        <echo message="T3.1.HibernateTableModelDemo"/>
+        <echo message="T3.2.HibernatePageTableModelDemo"/>
+        <echo message=""/>
+        <echo message="Demo for JIDE Code Editor-------------"/>
+        <echo message="E1.1: CodeEditorDemo"/>
+        <echo message="E1.2: CodeEditorDocumentPaneDemo"/>
+        <echo message="E1.3: PhpSyntaxParsingDemo"/>
+        <echo message=""/>
+        <echo message="Demo for JIDE Feed Reader-------------"/>
+        <echo message="F1: FeedReaderDemo"/>
+        <echo message=""/>
+        <echo message="Demo for JIDE Dashboard-------------"/>
+        <echo message="H1.1: CollapsiblePaneDashboardDemo"/>
+        <echo message="H1.2: DockableFrameDashboardDemo"/>
+        <echo message="H1.3: RegularPanelDashboardDemo"/>
+        <echo message="H1.4: CollapsiblePaneSingleDashboardDemo"/>
+        <echo message=""/>
+        <echo message="Demo for JIDE Charts-------------"/>
+        <echo message="R1.1: ConfigurableChartDemo"/>
+        <echo message="R1.2: PieChartDemo"/>
+        <echo message="R1.3: DifferentViewsDemo"/>
+        <echo message="R1.4: RainfallChartDemo"/>
+        <echo message="R1.5: TemperaturesChartDemo"/>
+        <echo message="R1.6: SunshineChartDemo"/>
+        <echo message="R1.7: CategoricalChartDemo"/>
+        <echo message="R1.8: ConfigurableBarChartDemo"/>
+        <echo message="R1.9: CubicSplinesChartDemo"/>
+        <echo message="R1.10: DualYAxisBarChartDemo"/>
+        <echo message="R1.11: InteractiveChartDemo"/>
+        <echo message="R1.12: LogarithmDemo"/>
+        <echo message="R1.13: LineChartDemo"/>
+        <echo message="R1.14: GradientLineFillDemo"/>
+        <echo message="R1.15: WithImagesChartDemo"/>
+        <echo message="R1.16: DynamicChartDemo"/>
+        <echo message="R1.17: ScatterChartDemo"/>
+        <echo message="R1.18: MeterDemo"/>
+        <echo message="R1.19: LineFittingChartDemo"/>
+        <echo message="R1.20: ScalabilityDemo"/>
+        <echo message="R1.21: CyclicalChartDemo"/>
+        <echo message="R1.22: CandleStickDemo"/>
+        <echo message="Demo for JIDE Gantt Chart-------------"/>
+        <echo message="N1: GanttChartDemo"/>
+        <echo message="N2: GanttChartPaneDemo"/>
+        <echo message="N3: NumberGanttChartDemo"/>
+        <echo message="N4: ProjectGanttChartDemo"/>
+    </target>
+    <target name="default" depends="compile, ALL"/>
+    <target name="ALL">
+        <java fork="true" classname="JideDemos" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="Designer">
+        <java fork="true" classname="com.jidesoft.designer.VisualDesigner" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B1.1">
+        <java fork="true" classname="JideBorderLayoutDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B1.2">
+        <java fork="true" classname="JideBoxLayoutDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B2">
+        <java fork="true" classname="IconsFactoryDemo" failonerror="true"
+              dir="${basedir}/B2.IconsFactory">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B3">
+        <java fork="true" classname="BorderDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B4">
+        <java fork="true" classname="JideButtonDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B5">
+        <java fork="true" classname="JideSplitPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B6">
+        <java fork="true" classname="JideTabbedPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B7">
+        <java fork="true" classname="SearchableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B7.1">
+        <java fork="true" classname="SearchableBarDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B8">
+        <java fork="true" classname="JideScrollPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B9">
+        <java fork="true" classname="PopupDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B10">
+        <java fork="true" classname="CheckBoxListDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B11">
+        <java fork="true" classname="AutoResizingTextAreaDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B12">
+        <java fork="true" classname="IndeterminateProgressBarDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B13">
+        <java fork="true" classname="AutoCompletionDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B14">
+        <java fork="true" classname="IntelliHintsDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B15">
+        <java fork="true" classname="StyledLabelDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B16">
+        <java fork="true" classname="CheckBoxTreeDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B17">
+        <java fork="true" classname="RangeSliderDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B18">
+        <java fork="true" classname="FolderChooserDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B19">
+        <java fork="true" classname="OverlayableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B20">
+        <java fork="true" classname="TitledSeparatorDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="B21">
+        <java fork="true" classname="MarqueePaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="C6">
+        <java fork="true" classname="AlertDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="C7">
+        <java fork="true" classname="BalloonTipDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="C1">
+        <java fork="true" classname="DocumentPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="C2">
+        <java fork="true" classname="StatusBarDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="C3">
+        <java fork="true" classname="CollapsiblePaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="C4.1">
+        <java fork="true" classname="FloorTabbedPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="C4.2">
+        <java fork="true" classname="OutlookTabbedPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="C5">
+        <java fork="true" classname="FastGradientPaintDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="D1">
+        <java fork="true" classname="DockingFrameworkDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="D2">
+        <java fork="true" classname="TwoDockDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="D3">
+        <java fork="true" classname="InitialLayoutDockDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="D4">
+        <java fork="true" classname="HeavyweightDockingFrameworkDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="A1">
+        <java fork="true" classname="SampleWord" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="A2">
+        <java fork="true" classname="SampleVsnet" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="A3">
+        <java fork="true" classname="SwingSet2" failonerror="true">
+            <classpath path="${basedir}/../examples/A3.SwingSet2/SwingSet2.jar"/>
+            <classpath path="${basedir}/classes/"/>
+
+        </java>
+    </target>
+    <target name="A4">
+        <java fork="true" classname="ThreeActionFrameworkDemo" failonerror="true">
+            <classpath path="${basedir}/classes/"/>
+
+        </java>
+    </target>
+    <target name="G1">
+        <java fork="true" classname="PropertyPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G2">
+        <java fork="true" classname="SortableTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G2.1">
+        <java fork="true" classname="TableSortItemEditorDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G3">
+        <java fork="true" classname="LargeSortableTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G4">
+        <java fork="true" classname="ComboBoxDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G5.1">
+        <java fork="true" classname="DateComboBoxDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G5.2">
+        <java fork="true" classname="DateChooserDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G5.3">
+        <java fork="true" classname="CalendarViewDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G6">
+        <java fork="true" classname="ColorChooserDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G7.1">
+        <java fork="true" classname="FilterableTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G7.2">
+        <java fork="true" classname="LuceneFilterableTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G7.3">
+        <java fork="true" classname="AutoFilterTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G8.1">
+        <java fork="true" classname="HierarchicalTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G8.2">
+        <java fork="true" classname="TradingHierarchicalTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G8.3">
+        <java fork="true" classname="ProgramHierarchicalTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G9">
+        <java fork="true" classname="TableUtilsDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G10">
+        <java fork="true" classname="TableScrollPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G10.1">
+        <java fork="true" classname="TreeTableScrollPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G11">
+        <java fork="true" classname="TableSplitPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G12">
+        <java fork="true" classname="JideTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G12.1">
+        <java fork="true" classname="AutoResizeModeDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G13">
+        <java fork="true" classname="DirectionChooserDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G14">
+        <java fork="true" classname="ConverterDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G15.1">
+        <java fork="true" classname="QuickFilterTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G15.2">
+        <java fork="true" classname="QuickFilterListDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G15.3">
+        <java fork="true" classname="QuickFilterTreeDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G16.1">
+        <java fork="true" classname="AbstractSpanTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G16.2">
+        <java fork="true" classname="DefaultSpanTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G17.1">
+        <java fork="true" classname="AbstractStyleTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G17.2">
+        <java fork="true" classname="TableFlashableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G17.3">
+        <java fork="true" classname="GradientStyleTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G17.4">
+        <java fork="true" classname="StripesTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G18">
+        <java fork="true" classname="FileSystemTreeTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G19.1">
+        <java fork="true" classname="SortableListDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G19.2">
+        <java fork="true" classname="SortableComboBoxDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G20">
+        <java fork="true" classname="SortableTreeDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G21.1">
+        <java fork="true" classname="DateSpinnerDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G21.2">
+        <java fork="true" classname="PointSpinnerDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G22">
+        <java fork="true" classname="ImagePreviewListDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G23.1">
+        <java fork="true" classname="IPTextFieldDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G23.2">
+        <java fork="true" classname="CreditCardTextFieldDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G24">
+        <java fork="true" classname="CalculatorDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G25">
+        <java fork="true" classname="CachedTableModelDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G26">
+        <java fork="true" classname="ContextSensitiveTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G27.1">
+        <java fork="true" classname="AutoFilterTableHeaderDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G27.2">
+        <java fork="true" classname="AutoFilterTreeTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G28">
+        <java fork="true" classname="GroupTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G29">
+        <java fork="true" classname="BeanTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G30.1">
+        <java fork="true" classname="FontGroupListDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G30.2">
+        <java fork="true" classname="IconGroupListDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G31">
+        <java fork="true" classname="DualListDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G32">
+        <java fork="true" classname="AbstractNavigableTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G33">
+        <java fork="true" classname="CustomFilterDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G34">
+        <java fork="true" classname="CustomStyleDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="G35">
+        <java fork="true" classname="ShrinkSearchableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="W1">
+        <java fork="true" classname="WizardDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="W2.1">
+        <java fork="true" classname="FirebirdOptionsDialog" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="W2.2">
+        <java fork="true" classname="IntelliJOptionsDialog" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="W2.3">
+        <java fork="true" classname="ListStyleOptionsDialog" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="W2.4">
+        <java fork="true" classname="VsnetOptionsDialog" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="W3">
+        <java fork="true" classname="TipsOfTheDayDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="W4">
+        <java fork="true" classname="ButtonPanelDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="W5">
+        <java fork="true" classname="BannerPanelDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="W6">
+        <java fork="true" classname="StandardDialogDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+
+        </java>
+    </target>
+    <target name="W7">
+        <java fork="true" classname="JideOptionPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="S1">
+        <java fork="true" classname="ShortcutEditorDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="P1">
+        <java fork="true" classname="PivotTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="P2">
+        <java fork="true" classname="CalculatedTableModelDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="P3">
+        <java fork="true" classname="AggregateTableDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="E1.1">
+        <java fork="true" classname="CodeEditorDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="E1.2">
+        <java fork="true" classname="CodeEditorDocumentPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="E1.3">
+        <java fork="true" classname="PhpSyntaxParsingDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="F1">
+        <java fork="true" classname="FeedReaderDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="H1.1">
+        <java fork="true" classname="CollapsiblePaneDashboardDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="H1.2">
+        <java fork="true" classname="DockableFrameDashboardDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="H1.3">
+        <java fork="true" classname="RegularPanelDashboardDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="H1.4">
+        <java fork="true" classname="CollapsiblePaneSingleDashboardDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="T1">
+        <java fork="true" classname="PageNavigationBarDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="T2.1">
+        <java fork="true" classname="DatabaseTableModelDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="T2.2">
+        <java fork="true" classname="DatabasePageTableModelDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="T3.1">
+        <java fork="true" classname="HibernateTableModelDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="T3.2">
+        <java fork="true" classname="HibernatePageTableModelDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.1">
+        <java fork="true" classname="ConfigurableChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.2">
+        <java fork="true" classname="PieChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.3">
+        <java fork="true" classname="DifferentViewsDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.4">
+        <java fork="true" classname="RainfallChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.5">
+        <java fork="true" classname="TemperaturesChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.6">
+        <java fork="true" classname="SunshineChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.7">
+        <java fork="true" classname="CategoricalChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.8">
+        <java fork="true" classname="ConfigurableBarChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.9">
+        <java fork="true" classname="CubicSplinesChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.10">
+        <java fork="true" classname="DualYAxisBarChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.11">
+        <java fork="true" classname="InteractiveChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.12">
+        <java fork="true" classname="LogarithmDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.13">
+        <java fork="true" classname="LineChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.14">
+        <java fork="true" classname="GradientLineFillDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.15">
+        <java fork="true" classname="WithImagesChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.16">
+        <java fork="true" classname="DynamicChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.17">
+        <java fork="true" classname="ScatterChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.18">
+        <java fork="true" classname="MeterDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.19">
+        <java fork="true" classname="LineFittingChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.20">
+        <java fork="true" classname="ScalabilityDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="R1.21">
+        <java fork="true" classname="CyclicalChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="N1">
+        <java fork="true" classname="GanttChartDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="N2">
+        <java fork="true" classname="GanttChartPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="N3">
+        <java fork="true" classname="NumberGanttChartPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+    <target name="N4">
+        <java fork="true" classname="ProjectGanttChartPaneDemo" failonerror="true">
+            <classpath refid="jide_classpath"/>
+        </java>
+    </target>
+</project>

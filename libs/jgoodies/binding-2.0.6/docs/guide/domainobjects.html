@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>JGoodies Binding :: Guide :: Domain Objects</title>
+        <link rel="stylesheet" type="text/css" href="../style.css" >
+	<meta name="description" content="The JGoodies Binding provides an elegant means to present object properties in a user interface.">
+	<meta name="author"	     content="Karsten Lentzsch">
+	<meta name="keywords"	 content="JGoodies Data Binding Java Swing UI Design Usability Lentzsch Kiel">
+	<meta name="robots"	     content="index, follow">
+	<meta name="date"	     content="2006-01-01">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0" bottommargin="0" >
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+    <td colspan="3" bgcolor="DDDCDC"><a href="../../README.html"><img 
+	src="../images/banner.gif" width="436" height="46" alt=":: JGOODIES Looks :: Professional Swing Look&amp;Feels" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3" height="1" bgcolor="C9C8C8"></td>
+</tr>
+<tr>
+    <td width="160" height="500" valign="top" bgcolor="F4f3f3" class="nav" nowrap="nowrap">
+    <div style="margin-left: 17px; margin-top: 17px; margin-right: 10px; ; margin-bottom: 17px; line-height: 18px;">
+
+        <!-- ************ Anfang der Seitennavigation **************************** -->
+
+	<b>General</b>
+	<br>::&nbsp;<a class="nav" href="../../README.html">Readme</a>
+	<br>::&nbsp;<a class="nav" href="../../RELEASE-NOTES.txt">Release Notes</a>
+	<br>::&nbsp;<a class="nav" href="../../LICENSE.txt">License</a>
+	<br>::&nbsp;<a class="nav" href="../references.html">References</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/faq.html">FAQ</a>
+	<p>
+	<b>User's Guide</b>
+	<br>::&nbsp;<a class="nav" href="introduction.html">Introduction</a>
+	<br>::&nbsp;<a class="nav" href="domainobjects.html"><b>Domain Objects</b></a>
+	<br>::&nbsp;<a class="nav" href="domainadapters.html">Domain Adapters</a>
+	<br>::&nbsp;<a class="nav" href="valuemodels.html">Value Models</a>
+	<br>::&nbsp;<a class="nav" href="viewadapters.html">View Adapters</a>
+	<br>::&nbsp;<a class="nav" href="tasks.html">Tasks</a>
+	<p>
+	<a class="nav" href="../api/index.html"><b>API Docs</b></a>
+	<p>
+	<b>Web Pages</b>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/">Project Home</a>
+	<br>::&nbsp;<a class="nav" href="http://www.jgoodies.com/downloads/libraries.html">Downloads</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/servlets/ProjectNewsList">Announcements</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/servlets/ProjectMailingListList">Mailing Lists</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/servlets/ProjectIssues">Issue Tracker</a>
+	<br>::&nbsp;<a class="nav" href="https://www.jgoodies.com/freeware/">More Examples</a>
+
+        
+         <!-- *********** Ende der Seitennavigation ******************************* -->
+
+    </div>
+    </td>
+    <td width="1" bgcolor="E7E5E5"><img src="/images/banner.gif" width="1" height="1" alt=""></td>
+    <td width="90%" valign="top" >
+	<div style="margin-left: 20px; margin-top: 17px; margin-bottom: 17px">
+
+        <!-- ************ Anfang des Inhalts ***************************************** -->
+	
+	<table width="530" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	  <td>
+	<h1>:: Guide :: Domain Objects ::</h1>
+	
+
+	<h2>Beans</h2>
+	
+	The Binding is about synchronizing domain object properties
+	with user interface components. We get values from the domain 
+	to put them into the UI component, and we set values in the 
+	domain object if the UI component changes.
+	
+	<p>
+	The Java Bean standard describes a uniform approach to
+	get and set properties, or in other words, how to read and write
+	values from/to domain objects.
+	
+	 
+	<h2>Observables (Bound Bean Properties)</h2>
+	
+	In most cases we want to update the view if a domain object
+	property changes. Therefore we must be able to observe changes.
+	The Java Bean standard describes a mechanism to notify observers 
+	about changes in a single or multiple bean properties.
+	
+	<p>
+	The so called bound Bean properties fire a PropertyChangeEvent
+	if the property value changes. The Bean standard describes that
+	a bound Bean must provide two methods to add and remove a
+	PropertyChangeListeners. 
+	For convenience, the Binding includes the abstract class
+	<tt>Model</tt> that provides everything necessary to register
+	listeners and to fire the property change events.
+	
+	 
+	<h2>ValueHolders</h2>
+	
+	<tt>ValueHolders</tt> are an alternative to bound bean properties as
+	described above. A ValueHolder is the minimal ValueModel implementation.
+	It holds a single value that we can get and set, and it notifies 
+	listeners about value changes.
+
+	<p>	
+	I recommend to favor bound bean properties over ValueHolders.
+	Bean properties are much wider known in the Java world and
+	work well with other libraries and programming styles.
+	A noticeable difference between ValueHolders and properties is,
+	that the ValueHolder is compile-time safe, where accessing
+	a Bean property may fail at runtime. Anyway, I use ValueHolders 
+	only rarely and for internal observable values.
+	
+	 
+	     
+
+	</td>
+	</tr>
+	</table>
+
+
+        <!-- ************ Ende des Inhalts ************************************** -->
+	</div>
+    </td>
+</tr>
+
+<tr>
+    <td nowrap="nowrap" bgcolor="F4f3f3">
+      <div style="font-size: 10px; margin-left: 17px; margin-top: 20px; margin-right: 10px; margin-bottom: 4px;">
+      (c) 2008 JGoodies
+      </div>
+    </td>
+    <td width="1" bgcolor="E7E5E5"></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="2" height="1" bgcolor="E7E5E5"></td>
+    <td></td>
+</tr>
+
+</table>
+
+</body>
+</html>

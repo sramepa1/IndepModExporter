@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--JBuilder XML Project-->
+<project>
+  <property category="generalFormatting2" name="overrideBasicFormatting" value="1"/>
+  <property category="java" name="compiler" value="hostjavac"/>
+  <property category="javaFormatting" name="packagePrefixGroups" value="java;javax;BLANK_LINE;java.awt;javax.swing;BLANK_LINE;org;(*)"/>
+  <property category="javaFormatting" name="packageThreshold" value="0"/>
+  <property category="javadoc" name="custom.tags.1" value="todo;a;To Do:"/>
+  <property category="runtime" name="ConfigurationCount" value="44"/>
+  <property category="runtime" name="DefaultConfiguration" value="-1"/>
+  <property category="runtime.0" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.0" name="ConfigurationName" value="A1.SampleWord"/>
+  <property category="runtime.0" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.0" name="application.class" value="SampleWord"/>
+  <property category="runtime.1" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.1" name="ConfigurationName" value="A2.Sample VS.net"/>
+  <property category="runtime.1" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.1" name="application.class" value="SampleVsnet"/>
+  <property category="runtime.10" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.10" name="ConfigurationName" value="B5.JideSplitPaneDemo"/>
+  <property category="runtime.10" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.10" name="application.class" value="JideSplitPaneDemo"/>
+  <property category="runtime.11" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.11" name="ConfigurationName" value="B6.JideTabbedPaneDemo"/>
+  <property category="runtime.11" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.11" name="application.class" value="JideTabbedPaneDemo"/>
+  <property category="runtime.12" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.12" name="ConfigurationName" value="B7.SearchableDemo"/>
+  <property category="runtime.12" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.12" name="application.class" value="SearchableDemo"/>
+  <property category="runtime.13" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.13" name="ConfigurationName" value="B8.Jide ScrollPane Demo"/>
+  <property category="runtime.13" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.13" name="application.class" value="JideScrollPaneDemo"/>
+  <property category="runtime.14" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.14" name="ConfigurationName" value="B9.Popup Demo"/>
+  <property category="runtime.14" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.14" name="application.class" value="PopupDemo"/>
+  <property category="runtime.15" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.15" name="ConfigurationName" value="C1.DocumentPaneDemo"/>
+  <property category="runtime.15" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.15" name="application.class" value="DocumentPaneDemo"/>
+  <property category="runtime.16" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.16" name="ConfigurationName" value="C2.StatusBarDemo"/>
+  <property category="runtime.16" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.16" name="application.class" value="StatusBarDemo"/>
+  <property category="runtime.17" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.17" name="ConfigurationName" value="C3.CollapsiblePaneDemo"/>
+  <property category="runtime.17" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.17" name="application.class" value="CollapsiblePaneDemo"/>
+  <property category="runtime.18" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.18" name="ConfigurationName" value="C4.FloorTabbedPaneDemo"/>
+  <property category="runtime.18" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.18" name="application.class" value="FloorTabbedPaneDemo"/>
+  <property category="runtime.19" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.19" name="ConfigurationName" value="C5.Fast Gradient Paint Demo"/>
+  <property category="runtime.19" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.19" name="application.class" value="FastGradientPaintDemo"/>
+  <property category="runtime.2" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.2" name="ConfigurationName" value="A3.SwingSet2"/>
+  <property category="runtime.2" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.2" name="application.class" value="SwingSet2"/>
+  <property category="runtime.20" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.20" name="ConfigurationName" value="C6.Alert Demo"/>
+  <property category="runtime.20" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.20" name="application.class" value="AlertDemo"/>
+  <property category="runtime.21" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.21" name="ConfigurationName" value="D1.DockingFrameworkDemo"/>
+  <property category="runtime.21" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.21" name="application.class" value="DockingFrameworkDemo"/>
+  <property category="runtime.22" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.22" name="ConfigurationName" value="D2: Two Dock Demo"/>
+  <property category="runtime.22" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.22" name="application.class" value="TwoDockDemo"/>
+  <property category="runtime.23" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.23" name="ConfigurationName" value="G1.PropertyPaneDemo"/>
+  <property category="runtime.23" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.23" name="application.class" value="PropertyPaneDemo"/>
+  <property category="runtime.24" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.24" name="ConfigurationName" value="G2.SortableTableDemo"/>
+  <property category="runtime.24" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.24" name="application.class" value="SortableTableDemo"/>
+  <property category="runtime.25" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.25" name="ConfigurationName" value="G3.LargeSortableTable Demo"/>
+  <property category="runtime.25" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.25" name="application.class" value="LargeSortableTableDemo"/>
+  <property category="runtime.26" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.26" name="ConfigurationName" value="G4.ComboBoxDemo"/>
+  <property category="runtime.26" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.26" name="application.class" value="ComboBoxDemo"/>
+  <property category="runtime.27" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.27" name="ConfigurationName" value="G5.DateChooserDemo"/>
+  <property category="runtime.27" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.27" name="application.class" value="DateChooserDemo"/>
+  <property category="runtime.28" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.28" name="ConfigurationName" value="G6.ColorChooserDemo"/>
+  <property category="runtime.28" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.28" name="application.class" value="ColorChooserDemo"/>
+  <property category="runtime.29" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.29" name="ConfigurationName" value="G7.FilterableTable Demo"/>
+  <property category="runtime.29" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.29" name="application.class" value="FilterableTableDemo"/>
+  <property category="runtime.3" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.3" name="ConfigurationName" value="A4.1 ThreeActionFramework"/>
+  <property category="runtime.3" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.3" name="application.class" value="ThreeActionFrameworkDemo"/>
+  <property category="runtime.30" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.30" name="ConfigurationName" value="G8.HierarchicalTable Demo"/>
+  <property category="runtime.30" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.30" name="application.class" value="HierarchicalTableDemo"/>
+  <property category="runtime.31" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.31" name="ConfigurationName" value="G9.TableUtils Demo"/>
+  <property category="runtime.31" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.31" name="application.class" value="TableUtilsDemo"/>
+  <property category="runtime.32" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.32" name="ConfigurationName" value="G10.TableScrollPane Demo"/>
+  <property category="runtime.32" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.32" name="application.class" value="TableScrollPaneDemo"/>
+  <property category="runtime.33" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.33" name="ConfigurationName" value="G11.TableSplitPane Demo"/>
+  <property category="runtime.33" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.33" name="application.class" value="TableSplitPaneDemo"/>
+  <property category="runtime.34" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.34" name="ConfigurationName" value="G12.JideTable Demo"/>
+  <property category="runtime.34" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.34" name="application.class" value="JideTableDemo"/>
+  <property category="runtime.35" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.35" name="ConfigurationName" value="G13.1 DirectionChooserDemo"/>
+  <property category="runtime.35" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.35" name="application.class" value="DirectionChooserDemo"/>
+  <property category="runtime.36" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.36" name="ConfigurationName" value="G13.2 DirectionPropertyPaneDemo"/>
+  <property category="runtime.36" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.36" name="application.class" value="DirectionPropertyPaneDemo"/>
+  <property category="runtime.37" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.37" name="ConfigurationName" value="W1.WizardDemo"/>
+  <property category="runtime.37" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.37" name="application.class" value="WizardDemo"/>
+  <property category="runtime.38" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.38" name="ConfigurationName" value="W2.1 FirebirdOptionsDialog"/>
+  <property category="runtime.38" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.38" name="application.class" value="FirebirdOptionsDialog"/>
+  <property category="runtime.39" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.39" name="ConfigurationName" value="W2.2 IntelliJOptionsDialog"/>
+  <property category="runtime.39" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.39" name="application.class" value="IntelliJOptionsDialog"/>
+  <property category="runtime.4" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.4" name="ConfigurationName" value="A4.2 ThreeActionDemo"/>
+  <property category="runtime.4" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.4" name="application.class" value="ThreeActionDemo"/>
+  <property category="runtime.40" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.40" name="ConfigurationName" value="W2.3 ListStyleOptionsDialog"/>
+  <property category="runtime.40" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.40" name="application.class" value="ListStyleOptionsDialog"/>
+  <property category="runtime.41" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.41" name="ConfigurationName" value="W2.4 VsnetOptionsDialog"/>
+  <property category="runtime.41" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.41" name="application.class" value="VsnetOptionsDialog"/>
+  <property category="runtime.42" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.42" name="ConfigurationName" value="W3.TipsOfTheDayDemo"/>
+  <property category="runtime.42" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.42" name="application.class" value="TipsOfTheDayDemo"/>
+  <property category="runtime.43" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.43" name="ConfigurationName" value="W4.ButtonPanelDemo"/>
+  <property category="runtime.43" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.43" name="application.class" value="ButtonPanelDemo"/>
+  <property category="runtime.44" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.44" name="ConfigurationName" value="W5.BannerPanelDemo"/>
+  <property category="runtime.44" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.44" name="application.class" value="BannerPanelDemo"/>
+  <property category="runtime.5" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.5" name="ConfigurationName" value="B1.1 JideBorderLayoutDemo"/>
+  <property category="runtime.5" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.5" name="application.class" value="JideBorderLayoutDemo"/>
+  <property category="runtime.6" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.6" name="ConfigurationName" value="B1.2 JideBoxLayoutDemo"/>
+  <property category="runtime.6" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.6" name="application.class" value="JideBoxLayoutDemo"/>
+  <property category="runtime.7" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.7" name="ConfigurationName" value="B2.IconsFactoryDemo"/>
+  <property category="runtime.7" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.7" name="application.class" value="IconsFactoryDemo"/>
+  <property category="runtime.7" name="custom.init_required" value="0"/>
+  <property category="runtime.7" name="custom.required.1" value="JIDE"/>
+  <property category="runtime.8" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.8" name="ConfigurationName" value="B3.BorderDemo"/>
+  <property category="runtime.8" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.8" name="application.class" value="BorderDemo"/>
+  <property category="runtime.9" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.9" name="ConfigurationName" value="B4.JideButtonDemo"/>
+  <property category="runtime.9" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.9" name="application.class" value="JideButtonDemo"/>
+  <property category="serverservices" name="disabled.services" value="jdatastore"/>
+  <property category="serverservices" name="single.server.name" value="Tomcat 4.0"/>
+  <property category="sys" name="AuthorLabel" value="@author"/>
+  <property category="sys" name="BackupPath" value="bak"/>
+  <property category="sys" name="CheckStable" value="1"/>
+  <property category="sys" name="Company" value=""/>
+  <property category="sys" name="CompanyLabel" value="Company:"/>
+  <property category="sys" name="Copyright" value="Copyright (c) 2003"/>
+  <property category="sys" name="CopyrightLabel" value="Copyright:"/>
+  <property category="sys" name="DefaultPath" value="D1.DockingFramework"/>
+  <property category="sys" name="Description" value=""/>
+  <property category="sys" name="DescriptionLabel" value="Description:"/>
+  <property category="sys" name="DocPath" value="../javadoc"/>
+  <property category="sys" name="ExcludeClassEnabled" value="0"/>
+  <property category="sys" name="IncludeTestPath" value="1"/>
+  <property category="sys" name="InstanceVisibility" value="2"/>
+  <property category="sys" name="JDK" value="java version 1.4.2_04-b05"/>
+  <property category="sys" name="JvmVersion" value="1.2"/>
+  <property category="sys" name="LastTag" value="0"/>
+  <property category="sys" name="Libraries" value="JIDE;SwingSet2"/>
+  <property category="sys" name="MakeStable" value="0"/>
+  <property category="sys" name="OutPath" value="classes"/>
+  <property category="sys" name="SourcePath" value="Demo;A1.SampleWord;A2.SampleVsnet;A3.SwingSet2;A4.ThreeActionFramework;B1.Layouts;B2.IconsFactory;B3.Borders;B4.JideButton;B5.JideSplitPane;B6.JideTabbedPane;B7.SearchableComponents;B8.JideScrollPane;B9.Popup;B10.CheckBoxList;B11.AutosizingTextArea;B12.IndeterminateProgressBar;B13.AutoCompletion;B14.IntelliHints;B15.StyledLabel;B16.CheckBoxTree;B17.RangeSlider;B18.FolderChooser;B19.Overlayable;B20.TitledSeparator;B21.MarqueePane;C1.DocumentPane;C2.StatusBar;C3.CollapsiblePane;C4.FloorTabbedPane;C5.FastGradientPaint;C6.Alert;C7.BalloonTip;D1.DockingFramework;D2.TwoDockingFramework;D3.InitialLayoutDockingFramework;G1.PropertyPane;G2.SortableTable;G3.LargeSortableTable;G4.ComboBoxes;G5.DateComboBoxes;G6.ColorComboBoxes;G7.FilterableTable;G8.HierarchicalTable;G9.TableUtilsDemo;G10.TableScrollPane;G11.TableSplitPane;G12.JideTable;G13.DirectionChooserDemo;G14.Converter;G15.QuickFilter;G16.SpanTable;G17.StyleTable;G18.TreeTable;G19.SortableList;G20.SortableTree;G21.Spinners;G22.ImagePreviewList;G23.TextFields;G24.Calculator;G25.CachedTableModel;G26.ContextSensitiveTable;G27.AutoFilterTableHeader;G28.GroupTable;G29.BeanTableModel;G30.GroupList;G31.DualList;G32.NavigableTable;G33.CustomFilterEditor;G34.CellStyleEditor;G35.ShrinkSearchableSupport;W1.Wizard;W2.OptionsDialog;W3.TipsOfTheDay;W4.ButtonPanel;W5.BannerPanel;W6.StandardDialog;W7.JideOptionPane;S1.ShortcutEditor;P1.PivotTablePane;P2.CalculatedTableModel;P3.AggregateTable;T1.NavigationBar;T2.DatabaseTableModel;T3.HibernateTableModel;E1.CodeEditor;F1.FeedReader;H1.Dashboard;R1.Charts;"/>
+  <property category="sys" name="TestPath" value="D1.DockingFramework"/>
+  <property category="sys" name="Title" value=""/>
+  <property category="sys" name="TitleLabel" value="Title:"/>
+  <property category="sys" name="Version" value="1.0"/>
+  <property category="sys" name="VersionLabel" value="@version"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+</project>

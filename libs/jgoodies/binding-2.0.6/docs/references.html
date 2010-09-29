@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>JGoodies Binding :: References</title>
+        <link rel="stylesheet" type="text/css" href="style.css" >
+	<meta name="description" content="The JGoodies Binding provides an elegant means to present object properties in a user interface.">
+	<meta name="author"	     content="Karsten Lentzsch">
+	<meta name="keywords"	 content="JGoodies Data Binding Java Swing UI Design Usability Lentzsch Kiel">
+	<meta name="robots"	     content="index, follow">
+	<meta name="date"	     content="2006-08-08">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0" bottommargin="0" >
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+    <td colspan="3" bgcolor="DDDCDC"><a href="../README.html"><img 
+	src="images/banner.gif" width="436" height="46" alt=":: JGOODIES :: Binding" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3" height="1" bgcolor="C9C8C8"></td>
+</tr>
+<tr>
+    <td width="160" height="500" valign="top" bgcolor="F4f3f3" class="nav" nowrap="nowrap">
+    <div style="margin-left: 17px; margin-top: 17px; margin-right: 10px; ; margin-bottom: 17px; line-height: 18px;">
+
+        <!-- ************ Anfang der Seitennavigation **************************** -->
+
+	<b>General</b>
+	<br>::&nbsp;<a class="nav" href="../README.html">Readme</a>
+	<br>::&nbsp;<a class="nav" href="../RELEASE-NOTES.txt">Release Notes</a>
+	<br>::&nbsp;<a class="nav" href="../LICENSE.txt">License</a>
+	<br>::&nbsp;<a class="nav" href="references.html"><b>References</b></a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/faq.html">FAQ</a>
+	<p>
+	<b>User's Guide</b>
+	<br>::&nbsp;<a class="nav" href="guide/introduction.html">Introduction</a>
+	<br>::&nbsp;<a class="nav" href="guide/domainobjects.html">Domain Objects</a>
+	<br>::&nbsp;<a class="nav" href="guide/domainadapters.html">Domain Adapters</a>
+	<br>::&nbsp;<a class="nav" href="guide/valuemodels.html">Value Models</a>
+	<br>::&nbsp;<a class="nav" href="guide/viewadapters.html">View Adapters</a>
+	<br>::&nbsp;<a class="nav" href="guide/tasks.html">Tasks</a>
+	<p>
+	<a class="nav" href="api/index.html"><b>API Docs</b></a>
+	<p>
+	<b>Web Pages</b>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/">Project Home</a>
+	<br>::&nbsp;<a class="nav" href="http://www.jgoodies.com/downloads/libraries.html">Downloads</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/servlets/ProjectNewsList">Announcements</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/servlets/ProjectMailingListList">Mailing Lists</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/servlets/ProjectIssues">Issue Tracker</a>
+	<br>::&nbsp;<a class="nav" href="https://www.jgoodies.com/freeware/">More Examples</a>
+
+        
+         <!-- *********** Ende der Seitennavigation ******************************* -->
+
+
+    </div>
+    </td>
+    <td width="1" bgcolor="E7E5E5"><img src="/images/banner.gif" width="1" height="1" alt=""></td>
+    <td width="90%" valign="top" >
+	<div style="margin-left: 20px; margin-top: 17px; margin-bottom: 17px">
+
+        <!-- ************ Anfang des Inhalts ***************************************** -->
+	
+	<table width="530" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	  <td>
+	  
+	<h1>:: References ::</h1>
+
+	<h3>Binding Presentations</h3>
+    <a href="http://www.jgoodies.com/articles/patterns-and-binding.pdf">Desktop 
+    Patterns &amp; Data Binding</a>
+	motivates the separation of the presentation logic from the presentation,
+	and the patterns supported by the JGoodies Binding. It also outlines
+	how to achieve such a separation. And it includes comments and findings
+	about automatic data binding systems.
+	    The <a href="http://www.jgoodies.com/articles/binding.pdf">Swing Data Binding</a> 
+    presentation provides more details: the main Binding concepts, and 
+    how adapter chains can be used to synchronize domain object properties 
+    with Swing components.
+	See the <a href="http://www.jgoodies.com/articles/">JGoodies Articles Page</a>.
+	
+	
+	<h3>Binding User's Guide</h3>
+	Introduces the main concepts used in the Binding, 
+	explains how to convert domain object properties to a generic form,
+	how to build adapter chains from ValueModels to Swing components,
+	and how to address typical binding tasks.
+	
+	
+	<h3>Binding API Docs</h3>
+	Describe, specify and explain the Binding API. The class comments
+	often motivate the need for a Binding class and contain basic
+	examples how to use it. 
+	
+	
+	<h3>Binding Tutorial</h3>
+	Source code examples that show typical uses and different aspects 
+	of the Binding in action. See the folder <tt>tutorial</tt> under this
+	distribution's root directory. The tutorial is based on the examples
+	in Martin Fowler's pattern catalog (see below).
+	
+	
+	<h3>Fowler's further Patterns of EAA</h3>
+    It is strongly recommended to study Martin Fowler's 
+    <a href="http://martinfowler.com/eaaDev/">additions</a> to his book 
+    "Patterns of Enterprise Application Architecture" (P of EAA).
+    These patterns are very valuable for structuring and implementing 
+    a Swing application - for all binding styles.
+	<a href="http://www.martinfowler.com/eaaDev/OrganizingPresentations.html">Organizing 
+	Presentation Logic</a> motivates why you may separate the
+	presentation logic from the domain and how to achieve this separation.
+	The  
+    <a href="http://martinfowler.com/eaaDev/PresentationModel.html">Presentation Model pattern</a>
+    is used again and again in the Binding tutorial. 
+	
+
+	<p>
+	<hr>
+	
+	<h3>JSR 295 - Beans Binding</h3>
+	
+	This Java Specification Request is about keeping Java Beans properties
+	in synch. It's scope is very similar to the JGoodies Binding.
+	An implementation shall become part of Java 7; a prototype
+	will likely show up as a public project at java.net.
+	<a href="http://jcp.org/en/jsr/detail?id=295">More...</a>
+		
+		
+	<h3>Swing Labs Data Binding</h3>
+	
+	Sun's Swing Labs project includes a data binding. 
+	It has been separated from the former JDNC project,
+	and integrates with the Swing Labs SwingX project.
+	<a href="https://databinding.dev.java.net/">More...</a>
+		
+		
+	<h3>Oracle Application Development Framework (ADF)</h3>
+	
+	Oracle's Application Development Framework (ADF) includes a data binding;
+	the ADF ships with Oracle's JDeveloper Java IDE. This IDE supports
+	the ADF binding and integrates the binding with a visual builder.
+	<a href="http://www.oracle.com/technology/products/jdev/">More...</a>
+	<br>
+	Oracle also has initiated the data binding 
+	<a href="http://www.jcp.org/en/jsr/detail?id=227">JSR&nbsp;227</a>.		
+		
+		
+	<h3>Spring Rich Client Project</h3>
+		
+	Part of this larger desktop project is a data binding very similar to 
+	the JGoodies Binding that uses several of the JGoodies Binding adapters. 
+	The project integrates the binding with other mechanisms and 
+	aims to simplify the construction of rich Swing applications.
+	<a href="http://www.springframework.org/spring-rcp.html">More...</a>
+	
+	    	
+    <h3>SWT Binding</h3>
+    
+    Jayasoft's SWTBinding adds SWT/JFace support to the JGoodies Binding.
+    It's an open source layer on top of the Binding that tries 
+    to get as close as possible to the underlying Binding API.
+    <a href="http://swtbinding.jayasoft.org/">More...</a>
+    
+
+    <h3>GlazedLists</h3>
+    
+    A toolkit for list transformations that allows to sort and filter
+    observable lists. 
+    <a href="http://publicobject.com/glazedlists/">More...</a>
+    
+    	
+	<h3>CUF (Client Utilities & Framework)</h3>
+    An application-level framework and collection of utilities.
+    Contains a data binding much like the JGoodies Binding,
+    a declarative state management, etc. 
+    <a href="http://cuf.sourceforge.net/">More...</a>
+		
+		
+	<h3>Jakarta Commons: BeanUtils</h3>
+	
+	A set of Bean introspection utilities that offer low-level support
+	for getting and setting property values in classes that follow
+	the naming design patterns BeanUtils described in the Java Bean specification.
+	<a href="http://jakarta.apache.org/commons/beanutils/">More...</a>
+	
+	
+    <h3>JXPath</h3> 
+    
+    An XPath interpreter for Java that allows to access general object 
+    data in Java Beans, Maps, DOM, and mixtures of these.
+    Could be combined with the JGoodies Binding to implement a 
+    general-purpose data access ValueModel. 
+    <a href="http://jakarta.apache.org/commons/jxpath/">More...</a>
+    
+    	
+   	<h3>OGNL</h3>
+    An object graph navigation language that can be used to implement
+    general-purpose data access ValueModels. 
+    <a href="http://www.ognl.org/">More...</a>
+    
+
+
+
+	</td>
+	</tr>
+	</table>
+
+        <!-- ************ Ende des Inhalts ************************************** -->
+	</div>
+    </td>
+</tr>
+
+<tr>
+    <td nowrap="nowrap" bgcolor="F4f3f3">
+      <div style="font-size: 10px; margin-left: 17px; margin-top: 20px; margin-right: 10px; margin-bottom: 4px;">
+      (c) 2008 JGoodies
+      </div>
+    </td>
+    <td width="1" bgcolor="E7E5E5"></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="2" height="1" bgcolor="E7E5E5"></td>
+    <td></td>
+</tr>
+
+</table>
+
+</body>
+</html>

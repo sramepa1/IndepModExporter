@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module relativePaths="false" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/classes" />
+    <output-test url="file://$MODULE_DIR$/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/A1.SampleWord" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/A2.SampleVsnet" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/A3.SwingSet2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/A4.ThreeActionFramework" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B1.Layouts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B10.CheckBoxList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B11.AutosizingTextArea" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B12.IndeterminateProgressBar" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B13.AutoCompletion" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B14.IntelliHints" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B15.StyledLabel" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B16.CheckBoxTree" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B17.RangeSlider" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B18.FolderChooser" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B19.Overlayable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B2.IconsFactory" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B20.TitledSeparator" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B21.MarqueePane" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B3.Borders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B4.JideButton" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B5.JideSplitPane" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B6.JideTabbedPane" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B7.SearchableComponents" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B8.JideScrollPane" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/B9.Popup" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/C1.DocumentPane" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/C2.StatusBar" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/C3.CollapsiblePane" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/C4.FloorTabbedPane" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/C5.FastGradientPaint" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/C6.Alert" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/C7.BalloonTip" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/D1.DockingFramework" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/D2.TwoDockingFramework" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/D3.InitialLayoutDockingFramework" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/E1.CodeEditor" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/F1.FeedReader" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G1.PropertyPane" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G10.TableScrollPane" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G11.TableSplitPane" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G12.JideTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G13.DirectionChooserDemo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G14.Converter" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G15.QuickFilter" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G16.SpanTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G17.StyleTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G18.TreeTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G19.SortableList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G2.SortableTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G20.SortableTree" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G21.Spinners" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G22.ImagePreviewList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G23.TextFields" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G24.Calculator" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G25.CachedTableModel" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G26.ContextSensitiveTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G27.AutoFilterTableHeader" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G28.GroupTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G29.BeanTableModel" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G3.LargeSortableTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G30.GroupList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G31.DualList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G32.NavigableTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G33.CustomFilterEditor" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G34.CellStyleEditor" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G35.ShrinkSearchableSupport" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G4.ComboBoxes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G5.DateComboBoxes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G6.ColorComboBoxes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G7.FilterableTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G8.HierarchicalTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/G9.TableUtilsDemo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/H1.Dashboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/N1.Gantt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/P1.PivotTablePane" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/P2.CalculatedTableModel" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/P3.AggregateTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/R1.Charts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/S1.ShortcutEditor" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/T1.NavigationBar" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/T2.DatabaseTableModel" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/T3.HibernateTableModel" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/W1.Wizard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/W2.OptionsDialog" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/W3.TipsOfTheDay" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/W4.ButtonPanel" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/W5.BannerPanel" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/W6.StandardDialog" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/W7.JideOptionPane" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="library" name="JIDE" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/A3.SwingSet2/SwingSet2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <javadoc-paths>
+      <root url="file://$MODULE_DIR$/javadoc" />
+    </javadoc-paths>
+  </component>
+  <component name="copyright">
+    <Base>
+      <setting name="state" value="2" />
+    </Base>
+  </component>
+</module>
+

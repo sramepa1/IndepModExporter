@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<promod-project>
+  <basics>
+    <last-name>Project 1</last-name>
+    <last-location>C:\promodProject\ProMod\.\test\cz\cvut\promod\services\projectService\sync\project1\Project 1.pmp</last-location>
+    <date>Thu May 06 17:16:52 CEST 2010</date>
+    <user/>
+  </basics>
+  <configuration>
+    <plugins>
+      <notation identifier="EPC" full-name="Event-Driven Process" abbreviation="EPC" extension="epc"/>
+      <notation identifier="24fd408b-3c50-4db5-a667-a106e56dbe6d" full-name="Process Hierarchy" abbreviation="PH" extension="phn"/>
+    </plugins>
+  </configuration>
+</promod-project>

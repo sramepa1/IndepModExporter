@@ -1,0 +1,19 @@
+In order to compile and run IndependentModeler you will have to
+download and configure folowing libraries in Intelli J Idea project:
+
+   * apache log4j >= 1.2
+
+   * foxtrot >= 3.0
+   
+   * jgoodies binding >= 2.0.6
+
+   * jgoodies forms >= 1.2.1
+
+   * jgraph >= 5.13.0.4
+
+   * jide >= 2.8.6
+
+   * junit >= 4.8.1
+
+With the exception of jide, all libraries are opensource and freely
+available.

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Do NOT use 'modeler' like a plugin alias. -->
+<!-- Case sensitive. -->
+
+<promod-plugins>
+
+  <notation alias="epc" class="cz.cvut.promod.epc.EPCNotation" config="epcNotation.properties">
+    <module alias="epc image export" class="cz.cvut.promod.epcImageExport.EPCImageExportModule" config="epcImageExportModule.properties" />    
+  </notation>
+  
+  <notation alias="hierarchy notation" class="cz.cvut.promod.hierarchyNotation.ProcessHierarchyNotation">
+    <module alias="ProcessHierarchyTreeLayout" class="cz.cvut.promod.ph.treeLayout.ProcessHierarchyTreeLayout" />
+    <module alias="DiagramReferenceModule" class="cz.cvut.promod.diagramReferenceModule.DiagramReferenceModule" config="phDiagramReference.properties" />
+  </notation>
+
+  <notation alias="classmodels" class="cz.cvut.indepmod.classmodel.ClassModelNotation" />
+
+  
+  <extension alias="MemoryIndicatorExtension" class="cz.cvut.promod.memory.MemoryIndicatorExtension" config="memoryIndicator.properties" />
+  	
+</promod-plugins>
+

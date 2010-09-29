@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <classpathentry kind="src" path="Demo"/>
+    <classpathentry kind="src" path="A1.SampleWord"/>
+    <classpathentry kind="src" path="A2.SampleVsnet"/>
+    <classpathentry kind="src" path="A3.SwingSet2"/>
+    <classpathentry kind="src" path="A4.ThreeActionFramework"/>
+    <classpathentry kind="src" path="B1.Layouts"/>
+    <classpathentry kind="src" path="B2.IconsFactory"/>
+    <classpathentry kind="src" path="B3.Borders"/>
+    <classpathentry kind="src" path="B4.JideButton"/>
+    <classpathentry kind="src" path="B5.JideSplitPane"/>
+    <classpathentry kind="src" path="B6.JideTabbedPane"/>
+    <classpathentry kind="src" path="B7.SearchableComponents"/>
+    <classpathentry kind="src" path="B8.JideScrollPane"/>
+    <classpathentry kind="src" path="B9.Popup"/>
+    <classpathentry kind="src" path="B10.CheckBoxList"/>
+    <classpathentry kind="src" path="B11.AutosizingTextArea"/>
+    <classpathentry kind="src" path="B12.IndeterminateProgressBar"/>
+    <classpathentry kind="src" path="B13.AutoCompletion"/>
+    <classpathentry kind="src" path="B14.IntelliHints"/>
+    <classpathentry kind="src" path="B15.StyledLabel"/>
+    <classpathentry kind="src" path="B16.CheckBoxTree"/>
+    <classpathentry kind="src" path="B17.RangeSlider"/>
+    <classpathentry kind="src" path="B18.FolderChooser"/>
+    <classpathentry kind="src" path="B19.Overlayable"/>
+    <classpathentry kind="src" path="B20.TitledSeparator"/>
+    <classpathentry kind="src" path="B21.MarqueePane"/>
+    <classpathentry kind="src" path="C1.DocumentPane"/>
+    <classpathentry kind="src" path="C2.StatusBar"/>
+    <classpathentry kind="src" path="C3.CollapsiblePane"/>
+    <classpathentry kind="src" path="C4.FloorTabbedPane"/>
+    <classpathentry kind="src" path="C5.FastGradientPaint"/>
+    <classpathentry kind="src" path="C6.Alert"/>
+    <classpathentry kind="src" path="C7.BalloonTip"/>
+    <classpathentry kind="src" path="D1.DockingFramework"/>
+    <classpathentry kind="src" path="D2.TwoDockingFramework"/>
+    <classpathentry kind="src" path="D3.InitialLayoutDockingFramework"/>
+    <classpathentry kind="src" path="G1.PropertyPane"/>
+    <classpathentry kind="src" path="G2.SortableTable"/>
+    <classpathentry kind="src" path="G3.LargeSortableTable"/>
+    <classpathentry kind="src" path="G4.ComboBoxes"/>
+    <classpathentry kind="src" path="G5.DateComboBoxes"/>
+    <classpathentry kind="src" path="G6.ColorComboBoxes"/>
+    <classpathentry kind="src" path="G7.FilterableTable"/>
+    <classpathentry kind="src" path="G8.HierarchicalTable"/>
+    <classpathentry kind="src" path="G9.TableUtilsDemo"/>
+    <classpathentry kind="src" path="G10.TableScrollPane"/>
+    <classpathentry kind="src" path="G11.TableSplitPane"/>
+    <classpathentry kind="src" path="G12.JideTable"/>
+    <classpathentry kind="src" path="G13.DirectionChooserDemo"/>
+    <classpathentry kind="src" path="G14.Converter"/>
+    <classpathentry kind="src" path="G15.QuickFilter"/>
+    <classpathentry kind="src" path="G16.SpanTable"/>
+    <classpathentry kind="src" path="G17.StyleTable"/>
+    <classpathentry kind="src" path="G18.TreeTable"/>
+    <classpathentry kind="src" path="G19.SortableList"/>
+    <classpathentry kind="src" path="G20.SortableTree"/>
+    <classpathentry kind="src" path="G21.Spinners"/>
+    <classpathentry kind="src" path="G22.ImagePreviewList"/>
+    <classpathentry kind="src" path="G23.TextFields"/>
+    <classpathentry kind="src" path="G24.Calculator"/>
+    <classpathentry kind="src" path="G25.CachedTableModel"/>
+    <classpathentry kind="src" path="G26.ContextSensitiveTable"/>
+    <classpathentry kind="src" path="G27.AutoFilterTableHeader"/>
+    <classpathentry kind="src" path="G28.GroupTable"/>
+    <classpathentry kind="src" path="G29.BeanTableModel"/>
+    <classpathentry kind="src" path="G30.GroupList"/>
+    <classpathentry kind="src" path="G31.DualList"/>
+    <classpathentry kind="src" path="G32.NavigableTable"/>
+    <classpathentry kind="src" path="G33.CustomFilterEditor"/>
+    <classpathentry kind="src" path="G34.CellStyleEditor"/>
+    <classpathentry kind="src" path="G35.ShrinkSearchableSupport"/>
+    <classpathentry kind="src" path="P1.PivotTablePane"/>
+    <classpathentry kind="src" path="P2.CalculatedTableModel"/>
+    <classpathentry kind="src" path="P3.AggregateTable"/>
+    <classpathentry kind="src" path="T1.NavigationBar"/>
+    <classpathentry kind="src" path="T2.DatabaseTableModel"/>
+    <classpathentry kind="src" path="T3.HibernateTableModel"/>
+    <classpathentry kind="src" path="W1.Wizard"/>
+    <classpathentry kind="src" path="W2.OptionsDialog"/>
+    <classpathentry kind="src" path="W3.TipsOfTheDay"/>
+    <classpathentry kind="src" path="W4.ButtonPanel"/>
+    <classpathentry kind="src" path="W5.BannerPanel"/>
+    <classpathentry kind="src" path="W6.StandardDialog"/>
+    <classpathentry kind="src" path="W7.JideOptionPane"/>
+    <classpathentry kind="src" path="S1.ShortcutEditor"/>
+    <classpathentry kind="src" path="E1.CodeEditor"/>
+    <classpathentry kind="src" path="F1.FeedReader"/>
+    <classpathentry kind="src" path="H1.Dashboard"/>
+    <classpathentry kind="src" path="R1.Charts"/>
+    <classpathentry kind="src" path="N1.Gantt"/>
+    <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+    <classpathentry kind="lib" path="A3.SwingSet2/SwingSet2.jar"/>
+    <classpathentry kind="lib" path="lib/jide-action.jar" sourcepath="src-stub/src-action-stub.zip"/>
+    <classpathentry kind="lib" path="lib/jide-beaninfo.jar"/>
+    <classpathentry kind="lib" path="lib/jide-common.jar" sourcepath="src/src-oss.zip"/>
+    <classpathentry kind="lib" path="lib/jide-components.jar" sourcepath="src-stub/src-components-stub.zip"/>
+    <classpathentry kind="lib" path="lib/jide-dashboard.jar" sourcepath="src-stub/src-dashboard-stub.zip"/>
+    <classpathentry kind="lib" path="lib/jide-designer.jar"/>
+    <classpathentry kind="lib" path="lib/jide-dialogs.jar" sourcepath="src-stub/src-dialogs-stub.zip"/>
+    <classpathentry kind="lib" path="lib/jide-dock.jar" sourcepath="src-stub/src-dock-stub.zip"/>
+    <classpathentry kind="lib" path="lib/jide-editor.jar" sourcepath="src-stub/src-editor-stub.zip"/>
+    <classpathentry kind="lib" path="lib/jide-grids.jar" sourcepath="src-stub/src-grids-stub.zip"/>
+    <classpathentry kind="lib" path="lib/jide-pivot.jar" sourcepath="src-stub/src-pivot-stub.zip"/>
+    <classpathentry kind="lib" path="lib/jide-data.jar" sourcepath="src-stub/src-data-stub.zip"/>
+    <classpathentry kind="lib" path="lib/jide-charts.jar" sourcepath="src-stub/src-charts-stub.zip"/>
+    <classpathentry kind="lib" path="lib/jide-gantt.jar" sourcepath="src-stub/src-gantt-stub.zip"/>
+    <classpathentry kind="lib" path="lib/jide-properties.jar"/>
+    <classpathentry kind="lib" path="lib/jide-rss.jar" sourcepath="src-stub/src-rss-stub.zip"/>
+    <classpathentry kind="lib" path="lib/jide-shortcut.jar" sourcepath="src-stub/src-shortcut-stub.zip"/>
+    <classpathentry kind="lib" path="lib/jide-synthetica.jar" sourcepath="src-stub/src-synthetica-stub.zip"/>
+    <classpathentry kind="lib" path="lib/informa.jar"/>
+    <classpathentry kind="lib" path="lib/commons-logging.jar"/>
+    <classpathentry kind="lib" path="lib/hsqldb.jar"/>
+    <classpathentry kind="lib" path="lib/hibernate3.jar"/>
+    <classpathentry kind="lib" path="lib/poi-3.5-FINAL-20090928.jar"/>
+    <classpathentry kind="lib" path="lib/jdom.jar"/>
+    <classpathentry kind="output" path="classes"/>
+</classpath>

@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>JGoodies Binding :: Guide :: Tasks</title>
+        <link rel="stylesheet" type="text/css" href="../style.css" >
+	<meta name="description" content="The JGoodies Binding provides an elegant means to present object properties in a user interface.">
+	<meta name="author"	     content="Karsten Lentzsch">
+	<meta name="keywords"	 content="JGoodies Data Binding Java Swing UI Design Usability Lentzsch Kiel">
+	<meta name="robots"	     content="index, follow">
+	<meta name="date"	     content="2003-07-31">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0" bottommargin="0" >
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+    <td colspan="3" bgcolor="DDDCDC"><a href="../../README.html"><img 
+	src="../images/banner.gif" width="436" height="46" alt=":: JGOODIES Looks :: Professional Swing Look&amp;Feels" border="0"></a></td>
+</tr>
+<tr>
+    <td colspan="3" height="1" bgcolor="C9C8C8"></td>
+</tr>
+<tr>
+    <td width="160" height="500" valign="top" bgcolor="F4f3f3" class="nav" nowrap="nowrap">
+    <div style="margin-left: 17px; margin-top: 17px; margin-right: 10px; ; margin-bottom: 17px; line-height: 18px;">
+
+        <!-- ************ Anfang der Seitennavigation **************************** -->
+
+	<b>General</b>
+	<br>::&nbsp;<a class="nav" href="../../README.html">Readme</a>
+	<br>::&nbsp;<a class="nav" href="../../RELEASE-NOTES.txt">Release Notes</a>
+	<br>::&nbsp;<a class="nav" href="../../LICENSE.txt">License</a>
+	<br>::&nbsp;<a class="nav" href="../references.html">References</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/faq.html">FAQ</a>
+	<p>
+	<b>User's Guide</b>
+	<br>::&nbsp;<a class="nav" href="introduction.html">Introduction</a>
+	<br>::&nbsp;<a class="nav" href="domainobjects.html">Domain Objects</a>
+	<br>::&nbsp;<a class="nav" href="domainadapters.html">Domain Adapters</a>
+	<br>::&nbsp;<a class="nav" href="valuemodels.html">Value Models</a>
+	<br>::&nbsp;<a class="nav" href="viewadapters.html">View Adapters</a>
+	<br>::&nbsp;<a class="nav" href="tasks.html"><b>Tasks</b></a>
+	<p>
+	<a class="nav" href="../api/index.html"><b>API Docs</b></a>
+	<p>
+	<b>Web Pages</b>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/">Project Home</a>
+	<br>::&nbsp;<a class="nav" href="http://www.jgoodies.com/downloads/libraries.html">Downloads</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/servlets/ProjectNewsList">Announcements</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/servlets/ProjectMailingListList">Mailing Lists</a>
+	<br>::&nbsp;<a class="nav" href="https://binding.dev.java.net/servlets/ProjectIssues">Issue Tracker</a>
+	<br>::&nbsp;<a class="nav" href="https://www.jgoodies.com/freeware/">More Examples</a>
+
+        
+         <!-- *********** Ende der Seitennavigation ******************************* -->
+
+    </div>
+    </td>
+    <td width="1" bgcolor="E7E5E5"><img src="/images/banner.gif" width="1" height="1" alt=""></td>
+    <td width="90%" valign="top" >
+	<div style="margin-left: 20px; margin-top: 17px; margin-bottom: 17px">
+
+        <!-- ************ Anfang des Inhalts ***************************************** -->
+	
+	<table width="530" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	  <td>
+	<h1>:: Guide :: Tasks ::</h1>
+	
+	
+	 <h2>Adapting Domain Properties</h2>
+	 
+	 If the domain object properties are implemented as Java Bean properties,
+	 they can be converted to ValueModels using a <tt>PresentationModel</tt>,
+	 <tt>BeanAdapter</tt>, or <tt>PropertyAdapter</tt>. Typically you'll use
+	 a PresentationModel, in some cases the simpler BeanAdapter, and only
+	 if you want to convert a single property, you may consider using 
+	 a PropertyAdapter.
+
+
+	 <h2>Observing and Firing Property Changes</h2>
+	 
+	 In most cases we want to automatically update the view
+	 of a bound domain property changes. More generally, 
+	 we want to update a view if a bound value changes.
+	 Therefore we must be able to register with the bound value
+	 to get notified about changes. That's the second role
+	 of the ValueModels - besides reading and writing values.
+	 
+	 <p>
+	 The Java Bean standard describes a standard mechanism 
+	 to report changes in property values and to listen to
+	 these changes, or in other words, to observe values.
+	 To make Bean properties bound, the bean class must
+	 provide a pair of methods to add and remove a 
+	 <tt>PropertyChangeListener</tt>. 
+	 We use the same mechanism and exactly the same events
+	 for all ValueModels in the JGoodies Binding.
+	 
+	 <p>
+	 To minimize the effort required to make your bean
+	 properties bound, you can extend the class <tt>Model</tt>
+	 that provides all the methods necessary to fire events
+	 and register listeners.
+	 
+
+
+
+	 <h2>Converting Values to Views</h2>
+	 
+	 To present a value with a Swing component, you can either
+	 set the value in the component, or you can provide a component model
+	 that will be used by the component to read and write values from/to.
+	 If possible we favor the latter approach and therefore offer
+	 a bunch of adapter classes that convert ValueModels into
+	 the model interface required by the different Swing components.
+	 For example, the <tt>RadioButtonAdapter</tt> is a model that converts
+	 a ValueModel so it can be used with a <tt>JRadioButton</tt>. 
+	 And the <tt>DocumentAdapter</tt> converts a ValueModel
+	 into a <tt>Document</tt> implementation, for use in <tt>JTextField</tt>,
+	 <tt>JTextArea</tt> and all other <tt>JTextComponents</tt>.
+	 
+	 <p>
+	 The <tt>BasicComponentFactory</tt> can create Swing components
+	 that are bound to a ValueModel; the factory chooses the appropriate
+	 adapter. If you already have a component factory, or if you are using
+	 customized versions of the standard Swing components, you can use
+	 the more basic <tt>Bindings</tt> class. It establishes the connection
+	 between a ValueModel and a given Swing component by setting the
+	 appropriate ValueModel adapter as the component's model.
+	 
+	 
+	 
+
+	 <h2><a name="buffering">Buffering</a></h2>
+
+     A <tt>BufferedValueModel</tt> is used to hold a temporary copy of 
+     the value in another ValueModel (known as the subject). 
+     The application modifies the temporary copy, but the 
+     BufferedValueModel only gives this temporary value to its subject 
+     when the application confirms the changes. 
+     The application also has the option of canceling the changes, 
+     resetting the temporary copy to the subject's value. 
+     <p>
+	For example, suppose the application provides a series of text fields 
+	for entering customer name, address, phone, etc., but we only want 
+	the Customer object to be updated after the user has finished 
+	entering data and has indicated completion by clicking on an OK button. 
+	This technique is often used in database applications, to postpone 
+	updating the customer record in the database until all changes to that 
+	record are completed. In this application, the customer's old address 
+	would likely be held by an PropertyAdapter on the Customer bean. 
+	The property adapter would become the subject of a BufferedValueModel. 
+	The BufferedValueModel would make a temporary copy of the customer's 
+	address and make that value available to the input field for editing. 
+	The user could change the address, but so far only the temporary copy 
+	has been altered. Only when the users clicks on 'OK' does the application 
+	notify each field's BufferedValueModel to replace the corresponding value 
+	in the Customer object. 
+	<p>
+    A BufferedValueModel is constructed for given ValueModels for the subject
+    and trigger channel. The subject is a ValueModel containing the data value. 
+    The trigger channel is a ValueHolder containing the boolean object false. 
+    Later, when the user clicks on 'OK', the application can cause the 
+    temporary copy to become the subject's value by setting the triggerChannel's 
+    value to true. The application can also cancel any edits, by setting 
+    the triggerChannel's value to false. Note that the prior value in 
+    the triggerChannel is not significant - as long as a value change 
+    is reported.
+    <p>
+    By using the same trigger channel for all of the BufferedValueModels, 
+    the application can cause them all to be updated at the same time. 
+    This is the usual arrangement for a set of related widgets. 
+    
+    
+    <h2>Change Management</h2>
+    
+    You may want to detect whether the user has changed an object 
+    in an editor to enable or disable a 'Save' action or an 'OK' button.
+      
+    Therefore you can compare the edited object's old and new values,
+    or listen to object property changes, or observe the buffering state
+    of BufferedValueModels - if you use any. 
+    
+    <p>
+    Comparing old and new values is the most precise approach
+    to detect whether things changed or not. But it requires 
+    to duplicate the edited values and compare them later.
+    You can copy (or clone) your domain objects and compare
+    them after each change using a custom <tt>#equals</tt> implementation.
+    
+    <p>
+    The classes PresentationModel and BeanAdapter provide a means
+    to detect potential changes. They listen to all bean property
+    changes and keep this state in a bound property <i>changed</i>.
+    You can read, write and observe this state, for example to
+    enable or disable Actions.
+    
+    <p>
+    If you are buffering the edited values, you can listen to
+    the BufferedValueModels <i>buffering</i> property to detect
+    pending changes. 
+    
+    
+    
+	 <h2>Indirection</h2>
+
+     Indirection is used to change the target object of a bound 
+     object property from one target to another. For example,
+     if you display a list of albums, and present the selection
+     in a details panel, you want to change the target object
+     whenever the selection changes. In other words, the details
+     components are bound to the property of <em>an</em> object,
+     the indirection tells the binding which object it is.
+     
+     <p>
+     If you are using PresentationModel, BeanAdapter or PropertyAdapter to convert 
+     Bean properties to ValueModels, you can set the current target bean 
+     in these adapters using <tt>#setBean(Object)</tt>.
+     
+     <p>
+     If multiple ValueModels shall be redirected from one target
+     to another, you'll typically use a <em>bean channel</em>.
+     That is another ValueModel that holds the target bean.
+     And every interested party can observe changes in the 
+     bean channel to change its target. The PresentationModel,
+     BeanAdapter and PropertyAdapter already provide constructors 
+     to use a bean channel.
+
+
+	 <h2><a name="conversion">Type Conversion</a></h2>
+
+	 The ValueModel interface operates on general Object instances. 
+	 If you want to convert types, you can wrap a ValueModel and
+	 perform the conversion while you get and set a value. 
+     In addition you must convert the old and new value in all
+	 <tt>PropertyChangeEvents</tt> fired by the wrapping ValueModel.
+	 Class <tt>AbstractConverter</tt> minimizes the effort required
+	 for such a conversion.
+	 
+	 <p>
+	 Conversions among ValueModels are rare, just because most conversions
+	 are required only for the presentation in the user interface.
+	 The latter can often be handled using the <tt>JFormattedTextField</tt>
+	 that provides a powerful means to format, parse, verify, and
+	 modify objects. See also the JavaDoc class comment in 
+	 <tt>AbstractConverter</tt>.
+
+
+	<h2>Renaming Domain Properties</h2>
+	
+	If you use Java Bean properties in the domain layer,
+	there are no direct references from the model or presentation layer
+	to the domain. To access properties the property's name and
+	the accessor names must by synchronized. This makes renaming properties
+	a little bit harder.
+	
+	<p>
+	I recommend to use String constants, not Strings, 
+	for the property names. Then refer to these constants when
+	getting ValueModels from a PresentationModel or when adding
+	and removing listeners. Renaming a property is then a 2-step process:
+	you rename 1) the getter and setter and 2) the property name constant.
+	
+	<p>
+	Note that this renaming problem applies to code obfuscation too.
+	Most code obfuscators rename the property accessor names,
+	but leave the property name unchanged. Attempts to observe
+	the property or to create an adapting ValueModel by the 
+	property name will then fail. 
+	Either you exclude the Bean accessors from the obfuscation, 
+	or you use ValueHolders in the domain. I personally favor
+	Beans and assume that most accessor names do not expose
+	the domain logic to be hidden by the obfuscator.
+	
+     
+
+	</td>
+	</tr>
+	</table>
+
+
+        <!-- ************ Ende des Inhalts ************************************** -->
+	</div>
+    </td>
+</tr>
+
+<tr>
+    <td nowrap="nowrap" bgcolor="F4f3f3">
+      <div style="font-size: 10px; margin-left: 17px; margin-top: 20px; margin-right: 10px; margin-bottom: 4px;">
+      (c) 2008 JGoodies
+      </div>
+    </td>
+    <td width="1" bgcolor="E7E5E5"></td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="2" height="1" bgcolor="E7E5E5"></td>
+    <td></td>
+</tr>
+
+</table>
+
+</body>
+</html>

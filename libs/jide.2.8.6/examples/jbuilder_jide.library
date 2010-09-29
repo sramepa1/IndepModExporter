@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <!--JBuilder Library Definition File-->
+  <fullname>JIDE</fullname>
+  <class>
+    <path>[lib/jide-common.jar]</path>
+    <path>[lib/jide-components.jar]</path>
+    <path>[lib/jide-dialogs.jar]</path>
+    <path>[lib/jide-dock.jar]</path>
+    <path>[lib/jide-grids.jar]</path>
+    <path>[lib/jide-action.jar]</path>
+    <path>[lib/jide-shortcut.jar]</path>
+    <path>[lib/jide-pivot.jar]</path>
+    <path>[lib/jide-data.jar]</path>
+    <path>[lib/jide-editor.jar]</path>
+    <path>[lib/jide-rss.jar]</path>
+    <path>[lib/jide-dashboard.jar]</path>
+    <path>[lib/jide-charts.jar]</path>
+    <path>[lib/jide-gantt.jar]</path>
+    <path>[lib/jide-synthetica.jar]</path>
+  </class>
+  <lastmodsaved>1070135214079</lastmodsaved>
+</library>

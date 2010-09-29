@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- definition of attributes -->
+  <xs:attribute name="alias" type="xs:string"/>
+  <xs:attribute name="class" type="xs:string"/>
+  <xs:attribute name="config" type="xs:string"/>
+
+  <!-- definition of complex elements -->
+  <xs:element name="extension">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- empty -->
+      </xs:sequence>
+      <xs:attribute ref="alias" use="required"/>
+      <xs:attribute ref="class" use="required"/>
+      <xs:attribute ref="config"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="module">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- empty -->
+      </xs:sequence>
+      <xs:attribute ref="alias" use="required"/>
+      <xs:attribute ref="class" use="required"/>
+      <xs:attribute ref="config"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="notation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="module" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute ref="alias" use="required"/>
+      <xs:attribute ref="class" use="required"/>
+      <xs:attribute ref="config"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="promod-plugins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="notation" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="extension" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

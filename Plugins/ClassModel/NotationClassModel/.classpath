@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ExtensionMemoryIndicator"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/IndependentModeler"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ModuleDiagramReference"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ModuleEPCImageExport"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ModuleProcessHierarchyTreeLayout"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/NotationEPC"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/NotationProcessHierarchy"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jide"/>
+	<classpathentry kind="output" path="C:/Documents and Settings/Glaurung/My Documents/CVUT/5 semestr/y36si23/indepmod/IndependentModeler/out/production/NotationClassModel"/>
+</classpath>
